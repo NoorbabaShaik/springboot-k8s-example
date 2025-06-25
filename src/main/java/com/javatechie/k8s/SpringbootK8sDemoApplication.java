@@ -7,12 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class SpringbootK8sDemoApplication {
+public class DemoController {
 
-	@GetMapping("/message")
-	public String welcome(){
-		return "Congratulation you successfully deployed your application to kubernetes !!";
-	}
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello from Spring Boot!";
+    }
+}
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootK8sDemoApplication.class, args);
